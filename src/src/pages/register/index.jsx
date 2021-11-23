@@ -1,14 +1,14 @@
-import LoginFormn from '../../components/login-form';
+import LoginForm from '../../components/login-form';
 import Navigation from '../../components/navigation';
 import backgroundImage from '../../assets/images/smiling-woman-auth-pages.jpg';
 import styles from './index.module.css';
 
-const RegisterPage = (props) => {
+const RegisterPage = ({ isLoginScreen }) => {
 
     return (
     <>
         <Navigation />
-        <LoginFormn />
+        <LoginForm isLoginScreen={isLoginScreen} />
         <img src={backgroundImage} className={styles.backgroundImage} alt="Smiling Woman" />
     </>)
 }

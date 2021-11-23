@@ -8,7 +8,7 @@ import UserContext from '../../context/user-context';
 
 const PickUsername = () => {
     const userContext = useContext(UserContext)
-    const [username, setUsername] = useState(userContext.user.username || '')
+    const [username, setUsername] = useState(userContext?.user?.username || '')
     const [usernameError, setUsernameError] = useState(false)
     const handleChange = (event) => {
         setUsername(event.target.data)

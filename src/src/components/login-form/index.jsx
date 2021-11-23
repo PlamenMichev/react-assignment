@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { signInWithGoogle } from '../../services/firebase.js'
 import UserContext from '../../context/user-context'
 
-const LoginForm = () => {
+const LoginForm = ({ isLoginScreen }) => {
     const [email, setEmail] = useState('')
     const [rememberMeChecked, setRememberMeChecked] = useState(true)
     const navigate = useNavigate();
@@ -18,13 +18,22 @@ const LoginForm = () => {
         userContext.logIn({
             ...result
         }, rememberMeChecked)
-        navigate('/pick-username')
+
+        if (isLoginScreen) {
+            navigate('/')
+        } else {
+            navigate('/pick-username')
+        }
+    }
+
+    const handleEmailLogin = () => {
+        navigate('/otp-page', { state: { isLoginScreen: isLoginScreen } })
     }
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.headerSection}>
-                <h1>Sign Up</h1>
+                <h1>{isLoginScreen ? 'Log In' : 'Sign Up'}</h1>
                 <h4>Enter your email to sign in</h4>
             </div>
             <div className={styles.googleIconWrapper}>
@@ -43,10 +52,10 @@ const LoginForm = () => {
                     </label>
                     <label htmlFor="rememberMe">Remember Me</label>
                 </div>
-                <button className={styles.submitButton} onClick={() => navigate('/otp-page')}>Sign Up</button>
+                <button className={styles.submitButton} onClick={handleEmailLogin}>{ isLoginScreen ? 'Log In' : 'Sign Up'}</button>
             </form>
 
-            <p className={styles.redirectText}>Don't have an account? <Link to="/login">Sign up</Link></p>
+            {isLoginScreen ? <p className={styles.redirectText}>Don't have an account? <Link to="/sign-up">Sign up</Link></p> : <p className={styles.redirectText}>Have an account? <Link to="/login">Log in</Link></p> }
         </div>
     )
 }

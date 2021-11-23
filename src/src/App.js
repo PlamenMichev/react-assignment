@@ -58,7 +58,7 @@ function App() {
         <Routes>
           <Route path="/sign-up" element={<RegisterPage />}/>
           <Route path="/otp-page" element={<OtpPage />}/>
-          <Route path="/login" element={<RegisterPage />}/>
+          <Route path="/login" element={<RegisterPage isLoginScreen={true} />}/>
           <Route path="/pick-username" element={<PickUsername /> }/>
           <Route path="/" element={ loggedIn ? <HomePage /> : <Navigate to="/sign-up" /> }/>
         </Routes>
