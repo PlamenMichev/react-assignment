@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'ClassicaPro-Bold';
+    src: url(../../assets/fonts/ClassicaPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Termina';
+    src: url(../../assets/fonts/Termina.ttf);
+}
+
+.wrapper {
+    display: flex;
+    padding: 25px 50px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.navLinks {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-family: ClassicaPro-Bold;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.loginButton {
+    padding: 10px 0px;
+    background-color: #000;
+    border-radius: 153px;
+    width: 42%;
+    color: white;
+    text-align: center;
+}
+
+.loginButton {
+	background-image: linear-gradient(to right, #12C2E9 0%, #F64F59 100%);
+	border-radius: 155px;
+    box-sizing: border-box;
+	display: block;
+	padding: 3px;
+	position: relative;
+	z-index: 2;
+    height: 38px;
+    width: 131px;
+}
+
+.loginButton span {
+	align-items: center;
+	background: #000;
+	border-radius: 155px;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+    font-family: Termina;
+    font-size: 13px;
+}

@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Termina';
+    src: url(../../assets/fonts/Termina.ttf);
+}
+
+
+.wrapper {
+    position: absolute;
+    height: 619px;
+    width: 574px;
+    border-radius: 15px;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    bottom: 48px;
+}
+
+.headerSection {
+    margin: 71px auto 26px auto;
+    text-align: center;
+}
+
+.headerSection > h1 {
+    font-family: Termina;
+    font-size: 32px;
+}
+
+.headerSection > h4 {
+    font-size: 16px;
+}
+
+.googleIconWrapper {
+    text-align: center;
+}
+
+.emailForm {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 22px;
+}
+
+.emailForm > label {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 15px;
+}
+
+.emailForm > input {
+    height: 50px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #E2E8F0;
+    padding: 0;
+    padding-left: 10px;
+    margin-left: -5px;
+    margin-bottom: 30px;
+}
+
+.checkboxSection {
+    display: flex;
+    align-items: center;
+}
+
+.checkboxSection > label {
+    margin-left: 10px;
+}
+
+/* Those stylings are only for the remember me checkbox */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 21px;
+    outline: none;
+  }
+
+  .switch input {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F178B6;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 21px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #ccc;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #ccc;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(-16px);
+    -ms-transform: translateX(-16px);
+    transform: translateX(-16px);
+  }
+
+  .submitButton {
+      text-transform: uppercase;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      padding: 15px 0;
+      margin: 36px 0 85px 0;
+      background-color: #FDDB2F;
+      font-weight: bold;
+      border: 0;
+      border-radius: 12px;
+      cursor: pointer;
+  }
+
+  .redirectText {
+      text-align: center;
+      color: #A0AEC0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 14px;
+  }
+
+  .redirectText > a {
+      color: #FDDB2F;
+      font-weight: 600;
+  }
