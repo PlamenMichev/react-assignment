@@ -2,10 +2,12 @@ import styles from './index.module.css'
 import googleIcon from '../../assets/icons/google.svg'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
 
 const LoginForm = () => {
     const [email, setEmail] = useState('')
     const [rememberMeChecked, setRememberMeChecked] = useState(true)
+    const navigate = useNavigate();
     return (
         <div className={styles.wrapper}>
             <div className={styles.headerSection}>
@@ -26,7 +28,7 @@ const LoginForm = () => {
                     </label>
                     <label htmlFor="rememberMe">Remember Me</label>
                 </div>
-                <button className={styles.submitButton}>Sign Up</button>
+                <button className={styles.submitButton} onClick={() => navigate('/otp-page')}>Sign Up</button>
             </form>
 
             <p className={styles.redirectText}>Don't have an account? <Link to="/login">Sign up</Link></p>
