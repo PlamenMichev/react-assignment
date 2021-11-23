@@ -3,8 +3,15 @@ import warningIcon from '../../assets/icons/warning.svg';
 import checkIcon from '../../assets/icons/check.svg';
 import styles from './index.module.css';
 import { useNavigate } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import UserContext from '../../context/user-context';
 
-const PickUsername = (props) => {
+const PickUsername = () => {
+    const userContext = useContext(UserContext)
+    const [username, setUsername] = useState(userContext.user.username || '')
+    const handleChange = (event) => {
+        setUsername(event.target.data)
+    }
 
     const navigate = useNavigate()
     return (
@@ -18,7 +25,7 @@ const PickUsername = (props) => {
                     <h4>We can be on a first name basis.</h4>
                 </div>
                 <form>
-                    <input className={styles.nameInput} type="text" name="username" placeholder="Type your name here" />
+                    <input className={styles.nameInput} type="text" name="username" value={username} onChange={handleChange} placeholder="Type your name here" />
                     <div className={styles.errorMessage}>
                         <img src={warningIcon} alt="warning icon" />
                         <span>Please fill this in</span>

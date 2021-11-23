@@ -1,13 +1,26 @@
 import styles from './index.module.css'
 import googleIcon from '../../assets/icons/google.svg'
-import { useState } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
+import { signInWithGoogle } from '../../services/firebase.js'
+import UserContext from '../../context/user-context'
 
 const LoginForm = () => {
     const [email, setEmail] = useState('')
     const [rememberMeChecked, setRememberMeChecked] = useState(true)
     const navigate = useNavigate();
+    const userContext = useContext(UserContext)
+
+    const handleGoogleLogin = async () => {
+        const result = await signInWithGoogle()
+        
+        userContext.logIn({
+            ...result
+        }, rememberMeChecked)
+        navigate('/pick-username')
+    }
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.headerSection}>
@@ -15,7 +28,9 @@ const LoginForm = () => {
                 <h4>Enter your email to sign in</h4>
             </div>
             <div className={styles.googleIconWrapper}>
-                <img src={googleIcon}  alt="Google Icon" />
+                <button className={styles.googleLoginButton} onClick={handleGoogleLogin}>
+                    <img src={googleIcon}  alt="Google Icon" />
+                </button>
             </div>
             <form className={styles.emailForm}>
                 <label htmlFor="email">Email</label>

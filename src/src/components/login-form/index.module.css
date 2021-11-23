@@ -149,3 +149,10 @@
       color: #FDDB2F;
       font-weight: 600;
   }
+
+  .googleLoginButton {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
