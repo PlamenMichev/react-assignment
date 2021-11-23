@@ -70,7 +70,6 @@ input:focus, textarea:focus, select:focus{
     border-radius: 7px;
     display: flex;
     align-items: center;
-    margin-bottom: 65px;
 }
 
 .errorMessage > img {
@@ -95,6 +94,7 @@ input:focus, textarea:focus, select:focus{
 }
 
 .submitSection {
+    margin-top: 65px;
     background-color: #fff;
     height: 38px;
     width: 94px;

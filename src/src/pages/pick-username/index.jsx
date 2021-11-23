@@ -9,8 +9,18 @@ import UserContext from '../../context/user-context';
 const PickUsername = () => {
     const userContext = useContext(UserContext)
     const [username, setUsername] = useState(userContext.user.username || '')
+    const [usernameError, setUsernameError] = useState(false)
     const handleChange = (event) => {
         setUsername(event.target.data)
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!username) {
+            setUsernameError(true)
+        } else {
+            userContext.user.username = username
+            navigate('/')
+        }
     }
 
     const navigate = useNavigate()
@@ -24,15 +34,14 @@ const PickUsername = () => {
                     <h1>Hi, What’s your name?</h1>
                     <h4>We can be on a first name basis.</h4>
                 </div>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <input className={styles.nameInput} type="text" name="username" value={username} onChange={handleChange} placeholder="Type your name here" />
-                    <div className={styles.errorMessage}>
+                    {usernameError ? <div className={styles.errorMessage}>
                         <img src={warningIcon} alt="warning icon" />
                         <span>Please fill this in</span>
-                    </div>
-                    
+                    </div> : <></>}
                     <div className={styles.submitSection}>
-                        <button onClick={() => navigate('/')} className={styles.submitButton}>Ok
+                        <button onClick={handleSubmit} className={styles.submitButton}>Ok
                             <img src={checkIcon} alt="check icon" /></button>
                     </div>
                 </form>
