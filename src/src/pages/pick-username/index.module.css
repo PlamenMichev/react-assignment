@@ -1,5 +1,5 @@
 body {
-    overflow: hidden;
+    overflow: auto;
 }
 
 .wrapper {
@@ -13,7 +13,7 @@ body {
 }
 
 .backgroundImage {
-    height: 100vh;
+    height: calc(100vh - 5px);
     margin-right: 163px;
 }
 

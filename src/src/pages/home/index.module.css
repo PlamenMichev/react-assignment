@@ -1,0 +1,199 @@
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mainHeader {
+    font-size: 24px;
+    margin-top: 54px;
+    border-bottom: 1px solid #CCC8C8;
+    padding-bottom: 70px;
+    margin-bottom: 45px;
+}
+
+.journeyHeader {
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.journeyHeader > img {
+    margin-right: 10px;
+}
+
+.newLabel {
+    position: absolute;
+    left: -30px;
+    top: -15px;
+}
+
+.programBanner {
+    position: relative;
+    width: fit-content;
+    border-radius: 19px;
+    z-index: 2;
+}
+
+.headerSection > h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.headerSection {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    left: 50%;
+}
+
+.headerSection > h4 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.journeyButton {
+    background-color: #FAF9F9;
+    padding: 12px 57px;
+    font-size: 15px;
+    color: #1F1F1F;
+    font-weight: 500;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.duration {
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.bannerImage {
+    filter: brightness(75%);
+    border-radius: 19px;
+}
+
+.programBanner:hover > .bannerImage {
+    filter: brightness(40%);
+}
+
+.addProgramSection {
+    height: 500px;
+    border-radius: 19px;
+    background-color: #FAF9F9;
+    border: 1px solid #C8C5C5;
+    position: relative;
+    min-width: 352px;
+}
+
+.addIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.programeSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33%;
+}
+
+.discordSection {
+    background-color: #DCDDDE;
+}
+
+.socialSection > div {
+    height: 47%;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.discordSection {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 30px;
+    justify-content: space-between;
+}
+
+.imageAndHeader {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.imageAndHeader > img {
+    margin-right: 22px;
+}
+
+.imageAndHeader > h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.discordDescription {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 21px;
+
+}
+
+.diskordLinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.onlineCircle {
+    width: 18px;
+    height: 18px;
+    background-color: #36D029;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.peopleOnline {
+    display: flex;
+    align-items: center;
+}
+
+.discordLink {
+    background-color: #FDDB2F;
+    padding: 9px 20px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.discordIcon {
+    margin-right: 5px;
+}
+
+.seminarSection {
+    background-image: linear-gradient(to bottom right, #D0F7FF, #FFEFF0);
+    padding: 60px 24px;
+}
+
+.seminarSection > h2 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.seminarSection > p {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}

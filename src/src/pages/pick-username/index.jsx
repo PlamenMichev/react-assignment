@@ -8,7 +8,7 @@ const PickUsername = (props) => {
 
     const navigate = useNavigate()
     return (
-    <div className={styles.wrapper}>
+        <div className={styles.wrapper}>
         <div className={styles.progressLine}></div>
         <div className={styles.flexSection}>
             <img src={backgroundImage} className={styles.backgroundImage} alt="Smiling Woman" />

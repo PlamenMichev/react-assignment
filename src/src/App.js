@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import OtpPage from './pages/otp';
 import PickUsername from './pages/pick-username';
+import HomePage from './pages/home';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path="/otp-page" element={<OtpPage />}/>
           <Route path="/login" element={<RegisterPage />}/>
           <Route path="/pick-username" element={<PickUsername />}/>
-          <Route path="/" element={<RegisterPage />}/>
+          <Route path="/" element={<HomePage />}/>
         </Routes>
     </Router>
   );

@@ -1,0 +1,14 @@
+.wrapper {
+    height: 174px;
+    width: 100%;
+    background-color: #FDDB2F;
+    display: flex;
+    margin-top: 123px;
+}
+
+.footerLogo {
+    font-family: Termina;
+    font-size: 42px;
+    margin-top: 62px;
+    margin-left: 45px;
+}
