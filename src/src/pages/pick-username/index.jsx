@@ -23,11 +23,16 @@ const PickUsername = () => {
         }
     }
 
+    const handleSkip = () => {
+        navigate('/')
+    }
+
     const navigate = useNavigate()
     return (
         <div className={styles.wrapper}>
         <div className={styles.progressLine}></div>
         <div className={styles.flexSection}>
+            <span className={styles.skip} onClick={handleSkip}>skip for now</span>
             <img src={backgroundImage} className={styles.backgroundImage} alt="Smiling Woman" />
             <div className={styles.formSection}>
                 <div className={styles.headerSection}>
@@ -39,7 +44,7 @@ const PickUsername = () => {
                     {usernameError ? <div className={styles.errorMessage}>
                         <img src={warningIcon} alt="warning icon" />
                         <span>Please fill this in</span>
-                    </div> : <></>}
+                    </div> : <div className={styles.errorMessage} style={{backgroundColor: '#FCFDF3'}}></div>}
                     <div className={styles.submitSection}>
                         <button onClick={handleSubmit} className={styles.submitButton}>Ok
                             <img src={checkIcon} alt="check icon" /></button>

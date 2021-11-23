@@ -30,6 +30,7 @@ body {
 
 .flexSection {
     display: flex;
+    position: relative;
 }
 
 .formSection {
@@ -65,8 +66,11 @@ input:focus, textarea:focus, select:focus{
 .errorMessage {
     margin-top: 20px;
     background-color: #FFF3F3;
-    padding: 9px;
-    width: fit-content;
+    width: 154px;
+    height: 39px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
     border-radius: 7px;
     display: flex;
     align-items: center;
@@ -101,4 +105,13 @@ input:focus, textarea:focus, select:focus{
     padding: 2px 0 0 2px;
     border-radius: 10px;
     background-color: #FDDB2F;
+}
+
+.skip {
+    color: #555555;
+    font-size: 15px;
+    position: absolute;
+    top: 28px;
+    right: 38px;
+    cursor: pointer;
 }

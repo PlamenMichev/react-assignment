@@ -23,7 +23,7 @@ function App() {
       // One week or today
       const numberOfDayToAdd = rememberMe ? 7 : 0;
       expirationDate.setDate(expirationDate.getDate() + numberOfDayToAdd);
-      
+
       addCookie('auth', user.token, expirationDate)
       setLoggedIn(true)
       setUser(user)
@@ -59,7 +59,7 @@ function App() {
           <Route path="/sign-up" element={<RegisterPage />}/>
           <Route path="/otp-page" element={<OtpPage />}/>
           <Route path="/login" element={<RegisterPage />}/>
-          <Route path="/pick-username" element={loggedIn ? <PickUsername /> : <Navigate to="/sign-up" /> }/>
+          <Route path="/pick-username" element={<PickUsername /> }/>
           <Route path="/" element={ loggedIn ? <HomePage /> : <Navigate to="/sign-up" /> }/>
         </Routes>
     </Router>

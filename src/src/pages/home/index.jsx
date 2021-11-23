@@ -8,13 +8,17 @@ import discordIcon from '../../assets/icons/discord.svg'
 import smallProgramImage from '../../assets/images/small-program-image.png'
 import { Link } from 'react-router-dom'
 import Footer from '../../components/footer'
+import { useContext } from 'react'
+import UserContext from '../../context/user-context'
 
 const HomePage = () => {
+    const userContext = useContext(UserContext)
+    const username = userContext.user.username || ''
     return (
         <>
             <Navigation isLoggedIn={true} />
             <div className={styles.wrapper}>
-                <h1 className={styles.mainHeader}>Good morning, Esthera </h1>
+                <h1 className={styles.mainHeader}>{ username ? `Good morning, ${username}!` : 'Good morning!' } </h1>
                 <h3 className={styles.journeyHeader}><img src={fingerPointIcon} alt="finger pointing down icon" /> Start your Journey</h3>
                 <div className={styles.programeSection}>
                     <div className={styles.programBanner}>
